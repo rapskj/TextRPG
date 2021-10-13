@@ -11,7 +11,6 @@ public class Game {
 
 
     public static void main(String[] args) {
-
         new Game();
     }
 
@@ -28,6 +27,8 @@ public class Game {
 
             switch(yourChoice){
                 case "Start": vm.cutscene(); break;
+                case "Credits": vm.showCredits(); break;
+                case "Back": vm.goBack(); break;
                 case "c1": break;
                 case "c2": break;
                 case "c3": break;
