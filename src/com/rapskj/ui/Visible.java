@@ -1,4 +1,6 @@
-package com.rapskj;
+package com.rapskj.ui;
+
+
 
 public class Visible {
     UI ui;
@@ -13,22 +15,28 @@ public class Visible {
         //Schovat zbytek hry
 
         ui.mainText.setVisible(false);
-        ui.goBackButton.setVisible(false);
         ui.choiceButtonP.setVisible(false);
-        ui.creditText.setVisible(false);
+        ui.goBackButton.setVisible(false);
+        ui.creditPanel.setVisible(false);
+
 
     }
 
     public void cutscene(){
+
+        //ukazat zbytek hry
+        ui.choiceButtonP.setVisible(true);
+        ui.mainText.setVisible(true);
+
 
         //schovat uvodni obrazovku
         ui.titlePanel.setVisible(false);
         ui.startButton.setVisible(false);
         ui.creditButton.setVisible(false);
         ui.goBackButton.setVisible(false);
-        //ukazat zbytek hry
-        ui.mainText.setVisible(true);
-        ui.choiceButtonP.setVisible(true);
+        ui.quitButton.setVisible(false);
+
+
 
     }
 
@@ -36,6 +44,7 @@ public class Visible {
         ui.titlePanel.setVisible(false);
         ui.choiceButtonP.setVisible(false);
         ui.startButton.setVisible(false);
+        ui.quitButton.setVisible(false);
 
         ui.creditPanel.setVisible(true);
         ui.creditText.setVisible(true);
@@ -47,6 +56,7 @@ public class Visible {
     }
 
     public void goBack(){
+
         ui.creditPanel.setVisible(false);
         ui.creditText.setVisible(false);
         ui.creditButton.setVisible(false);
@@ -55,9 +65,13 @@ public class Visible {
         ui.startPanel.setVisible(true);
         ui.startButton.setVisible(true);
         ui.creditButton.setVisible(true);
+        ui.quitButton.setVisible(true);
 
         ui.mainText.setVisible(false);
         ui.choiceButtonP.setVisible(false);
         ui.creditText.setVisible(false);
+
+
+
     }
 }
