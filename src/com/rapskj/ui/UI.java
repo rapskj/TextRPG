@@ -9,7 +9,7 @@ import java.awt.*;
 public class UI {
 
     JFrame window;
-    JPanel titlePanel, startPanel, mainText, choiceButtonP, creditPanel;
+    JPanel titlePanel, startPanel, mainText, choiceButtonP, creditPanel, statusPanel;
     JLabel titleLabel;
     JTextArea creditText,mainTextA;
     JButton startButton, creditButton, goBackButton, quitButton, ch1, ch2, ch3, ch4, sts;
@@ -58,6 +58,8 @@ public class UI {
         titlePanel.setBounds(tnp_x,tnp_y,tnp_w,tnp_h);
 
         //titlePanel.setBounds(100,100,600,500);
+
+        // 100/800; 100/600; 600/800; 500/600
         /*
         Generace panelu ve kterem bude popis hry.
         x: osa x
@@ -192,6 +194,14 @@ public class UI {
         sts.addActionListener(cHandler);
         sts.setActionCommand("Status");
         choiceButtonP.add(sts);
+
+        statusPanel = new JPanel();
+        statusPanel.setBounds(550,350,200,100);
+        statusPanel.setBackground(Color.black);
+        statusPanel.setLayout(new GridLayout(5,1));
+        window.add(statusPanel);
+
+
 
         //Credit Panel
         creditPanel = new JPanel();
