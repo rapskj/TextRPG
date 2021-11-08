@@ -119,7 +119,7 @@ public class UI {
 
         //Main text
 
-        mainTextA = new JTextArea("Bonk");
+        mainTextA = new JTextArea();
         int mn_x = (int) Math.round(curScreenWidth*0.125);
         int mn_y = (int) Math.round(curScreenHeight*0.166);
         int mn_w = (int) Math.round(curScreenWidth*0.75);
