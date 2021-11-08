@@ -144,7 +144,7 @@ public class UI {
         choiceButtonP.setBounds(chp_x,chp_y,chp_w,chp_h);
         //choiceButtonP.setBounds(250,350,300,150);
         choiceButtonP.setBackground(Color.BLACK);
-        choiceButtonP.setLayout(new GridLayout(3,2));
+        choiceButtonP.setLayout(new GridLayout(3,3));
 
         ch1 = new JButton("Choice 1");
         ch1.setBackground(Color.BLACK);
@@ -191,7 +191,6 @@ public class UI {
         sts.setForeground(Color.white);
         sts.setFocusPainted(false);
         sts.setFont(normalText);
-        sts.addActionListener(cHandler);
         sts.setActionCommand("Status");
         choiceButtonP.add(sts);
 

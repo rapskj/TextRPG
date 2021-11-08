@@ -7,10 +7,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Game {
+
     ChoiceHandler cHandler = new ChoiceHandler();
     UI ui = new UI();
     Visible vm = new Visible(ui);
     Story story = new Story(this,ui,vm);
+
+   public String nextPos1, nextPos2, nextPos3, nextPos4;
 
 
     public static void main(String[] args) {
@@ -36,10 +39,10 @@ public class Game {
                 case "Back": vm.goBack(); break;
                 case "Quit": System.exit(0); break;
                 case "Status": break;
-                case "c1": break;
-                case "c2": break;
-                case "c3": break;
-                case "c4": break;
+                case "c1": story.selectPos(nextPos1); break;
+                case "c2": story.selectPos(nextPos2); break;
+                case "c3": story.selectPos(nextPos3); break;
+                case "c4": story.selectPos(nextPos4); break;
             }
         }
     }
