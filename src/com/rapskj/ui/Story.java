@@ -40,6 +40,9 @@ public class Story {
             case"tavernAgain":tavernAgain(); break;
             case"blue":blue(); break;
             case"northAgain": northAgain(); break;
+            case"killKing": killKing(); break;
+            case"talkKing": talkKing(); break;
+            case"fightKing": fightKing(); break;
 
         }
     }
@@ -167,20 +170,6 @@ public class Story {
         game.nextPos3 = "goBack";
         game.nextPos4 = "";
     }
-    public void northAgain(){
-        ui.mainTextA.setText("[Fairy Queen]: There is nothing left to say, adventurer. Go back.");
-        ui.ch2.setVisible(false);
-        ui.ch3.setVisible(false);
-        ui.ch4.setVisible(false);
-        ui.sts.setVisible(false);
-
-        ui.ch1.setText("Back");
-
-        game.nextPos1 = "goBack";
-        game.nextPos2 = "";
-        game.nextPos3 = "";
-        game.nextPos4 = "";
-    }
 
     public void red(){
         ui.mainTextA.setText("[Fairy Queen]: You picked correct pill. Congratulations, you may continue your quest.");
@@ -209,10 +198,87 @@ public class Story {
         game.nextPos3 = "";
         game.nextPos4 = "";
     }
-    public void east(){
-        ui.mainTextA.setText("test");
 
+    public void northAgain(){
+        ui.mainTextA.setText("[Fairy Queen]: There is nothing left to say, adventurer. Go back.");
+        ui.ch2.setVisible(false);
+        ui.ch3.setVisible(false);
+        ui.ch4.setVisible(false);
+        ui.sts.setVisible(false);
+
+        ui.ch1.setText("Back");
+
+        game.nextPos1 = "goBack";
+        game.nextPos2 = "";
+        game.nextPos3 = "";
+        game.nextPos4 = "";
     }
+
+
+    public void east(){
+        ui.mainTextA.setText("After many hours of climbing up the mountain, you reached a Dwarven city of Khaadgard. You quickly sought an audience from King Elrokk.\n[Elrokk]: Well, well, well. The famous adventurer, trying to steal all the joy from this world. I will not go down without a fight!");
+        ui.ch1.setText("Talk");
+        ui.ch2.setText("Fight");
+        ui.ch3.setVisible(false);
+        ui.ch4.setVisible(false);
+        ui.sts.setVisible(false);
+
+        game.nextPos1 = "talkKing";
+        game.nextPos2 = "fightKing";
+        game.nextPos3 = "";
+        game.nextPos4 = "";
+    }
+    public void talkKing(){
+        ui.mainTextA.setText("Did you really think you could talk to a dwarf? They are stubborn. You need to kill him.");
+        ui.ch1.setVisible(true);
+        ui.ch2.setVisible(true);
+        ui.ch3.setVisible(true);
+        ui.ch4.setVisible(true);
+        ui.sts.setVisible(false);
+        ui.ch1.setText("Kill");
+        ui.ch2.setText("Kill");
+        ui.ch3.setText("Kill");
+        ui.ch4.setText("Kill");
+
+        game.nextPos1 = "killKing";
+        game.nextPos2 = "killKing";
+        game.nextPos3 = "killKing";
+        game.nextPos4 = "killKing";
+    }
+
+    public void fightKing(){
+        ui.mainTextA.setText("You only have one chance, kill him now.");
+        ui.ch1.setVisible(true);
+        ui.ch2.setVisible(true);
+        ui.ch3.setVisible(true);
+        ui.ch4.setVisible(true);
+        ui.sts.setVisible(false);
+        ui.ch1.setText("Kill");
+        ui.ch2.setText("Kill");
+        ui.ch3.setText("Kill");
+        ui.ch4.setText("Kill");
+
+        game.nextPos1 = "killKing";
+        game.nextPos2 = "killKing";
+        game.nextPos3 = "killKing";
+        game.nextPos4 = "killKing";
+    }
+
+    public void killKing(){
+        ui.mainTextA.setText("You did it. You killed him. You quickly grabbed the Dwarven joy and rushed back.");
+        ui.ch2.setVisible(false);
+        ui.ch3.setVisible(false);
+        ui.ch4.setVisible(false);
+        ui.sts.setVisible(false);
+
+        ui.ch1.setText("Back");
+
+        game.nextPos1 = "goBack";
+        game.nextPos2 = "";
+        game.nextPos3 = "";
+        game.nextPos4 = "";
+    }
+
     public void west(){
         ui.mainTextA.setText("test");
     }
