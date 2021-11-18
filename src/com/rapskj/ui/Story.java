@@ -11,6 +11,9 @@ public class Story {
     UI ui;
     Visible vm;
     Player player = new Player();
+    int northC = 0;
+    int westC = 0;
+    int eastC = 0;
 
     public Story(Game g, UI uI, Visible vM) {
 
@@ -43,6 +46,7 @@ public class Story {
             case"killKing": killKing(); break;
             case"talkKing": talkKing(); break;
             case"fightKing": fightKing(); break;
+            case"eastAgain": eastAgain(); break;
 
         }
     }
@@ -150,24 +154,44 @@ public class Story {
         ui.ch3.setText("South");
         ui.ch4.setText("West");
 
-        game.nextPos1 = "northAgain";
-        game.nextPos2 = "east";
+        if (northC == 0){
+            game.nextPos1 = "north";
+        }
+        else {
+            game.nextPos1 = "northAgain";
+        }
+
+        if (eastC == 0){
+            game.nextPos2 = "east";
+        }
+        else {
+            game.nextPos2 = "eastAgain";
+        }
+
+        if (westC == 0){
+            game.nextPos4 = "west";
+        }
+        else{
+            game.nextPos4 = "westAgain";
+        }
+
         game.nextPos3 = "tavernAgain";
-        game.nextPos4 = "west";
     }
 
     public void north(){
+        northC++;
         ui.mainTextA.setText("You entered a magical forest. A fairy queen stands before you and gives you a choice. You either take red pill of eternal happiness or blue pill of eternal sorrow\n[Fairy Queen]: Choose carefully, adventurer. Do not forget your quest. Now, which one will you choose?");
+        ui.ch3.setVisible(false);
         ui.ch4.setVisible(false);
         ui.sts.setVisible(false);
 
         ui.ch1.setText("Red");
         ui.ch2.setText("Blue");
-        ui.ch3.setText("Go south");
+
 
         game.nextPos1 = "red";
         game.nextPos2 = "blue";
-        game.nextPos3 = "goBack";
+        game.nextPos3 = "";
         game.nextPos4 = "";
     }
 
@@ -216,6 +240,7 @@ public class Story {
 
 
     public void east(){
+        eastC++;
         ui.mainTextA.setText("After many hours of climbing up the mountain, you reached a Dwarven city of Khaadgard. You quickly sought an audience from King Elrokk.\n[Elrokk]: Well, well, well. The famous adventurer, trying to steal all the joy from this world. I will not go down without a fight!");
         ui.ch1.setText("Talk");
         ui.ch2.setText("Fight");
@@ -225,6 +250,20 @@ public class Story {
 
         game.nextPos1 = "talkKing";
         game.nextPos2 = "fightKing";
+        game.nextPos3 = "";
+        game.nextPos4 = "";
+    }
+
+    public void eastAgain(){
+        ui.mainTextA.setText("You did it. Everyone is dead, you just wiped the whole kingdom in mere seconds.\nYou monster.");
+        ui.ch1.setText("Back");
+        ui.ch2.setVisible(false);
+        ui.ch3.setVisible(false);
+        ui.ch4.setVisible(false);
+        ui.sts.setVisible(false);
+
+        game.nextPos1 = "goBack";
+        game.nextPos2 = "";
         game.nextPos3 = "";
         game.nextPos4 = "";
     }
@@ -280,6 +319,7 @@ public class Story {
     }
 
     public void west(){
+        westC++;
         ui.mainTextA.setText("test");
     }
 
