@@ -14,6 +14,7 @@ public class Story {
     int northC = 0;
     int westC = 0;
     int eastC = 0;
+    int aggro = 0;
 
     public Story(Game g, UI uI, Visible vM) {
 
@@ -108,6 +109,7 @@ public class Story {
 
     }
     public void fightStranger(){
+        aggro++;
         ui.mainTextA.setText("[Stranger]: Hey, pal. Why are you attacking me? I'll pretend this didn't happen, but don't do it again.");
         ui.ch1.setText("Leave");
         ui.ch2.setVisible(false);

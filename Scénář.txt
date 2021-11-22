@@ -1,0 +1,73 @@
+Sorrow Euphoria -- Scénář
+
+-----
+Úvod
+-----
+
+Hráč se objeví v hospodě, kde na něj mluví cizinec:
+
+"[Stranger]: Hey, fella. Do you want some joy?"
+
+Hráč má zde možnost buď zvolit možnost "Take", "Refuse" anebo "Fight"
+
+Pokud hráč zvolí možnost "Refuse" hra se ukončí, neboť se nedá pokračovat v příběhu.
+Pokud hráč zvolí možnost "Fight", tak se spustí nový dialog:
+
+"[Stranger]:Hey, pal. Why are you attacking me? I'll pretend this didn't happen, but don't do it again."
+V tomto případě se naprosto přeskočí prvotní výběr joy.
+
+Pokud hráč zvolí možnost "Take", tak se spustí nový dialog:
+"[Stranger]: That's what I like to see. I'll give you a quest, fetch me another two joys. Don't take any other pills."
+
+Hráč dostane úkol, aby získal radost z celého světa a doručil ji cizinci. Poté se objeví tlačítko "Exit"
+
+-----------
+Crossroads
+-----------
+
+Zde má hráč možnost jít do několika směrů. Má na výběr jít buď na sever, jih, západ anebo východ.
+
+"Finally you got out. Your main goal is to obtain joy.
+However, if you pick up anything else, your game will be over.
+Head north to pick up the first pill.
+If you go south, you will go back to the tavern."
+
+V tomto stádiu není možné sledovat stav inventáře a není zde žádný předmět.
+
+Tlačítka: 
+[North]
+[East]
+[South]
+[West]
+
+
+------
+North
+------
+"You entered a magical forest. A fairy queen stands before you and gives you a choice. 
+You either take red pill of eternal happiness or blue pill of eternal sorrow
+[Fairy Queen]: Choose carefully, adventurer. Do not forget your quest. Now, which one will you choose?"
+
+Hráč má na výběr vzít buď modrou anebo červenou pilulku.
+
+Pokud hráč vybere červenou pilulku, tak se spustí tento dialog:
+"[Fairy Queen]: You picked correct pill. Congratulations, you may continue your quest."
+
+A hráč může jít zpátky na Crossroads.
+
+Ovšem pokud vybere modrou pilulku, která je otrávená, spustí se tento dialog:
+"[Fairy Queen]: You picked the wrong pill. Unfortunately, you failed.You received fatal damage. Game over."
+
+A hra skončila.
+
+-----------------
+Crossroads Again
+-----------------
+
+"Here you are, once again. You might want to check your inventory to see how many pills you got and how many remain."
+
+Hráč zde může zjistit, kolik předmětů již má skrze tlačítko "Status"
+
+Pokud by hráč znovu klikl na tlačítko [North] tak se spustí tento dialog:
+"[Fairy Queen]: There is nothing left to say, adventurer. Go back."
+a hráč je nucen se vrátit zpátky
