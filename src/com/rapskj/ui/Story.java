@@ -37,11 +37,13 @@ public class Story {
             case"townExit":townExit(); break;
             case"east": east(); break;
             case"north":north();break;
-            case"west":west(); break;
+            case"south": south(); break;
+            case"west":
+            case"tavernAgain":
+                tavernAgain(); break;
             case"tavernMeet":tavernMeet(); break;
             case"red":red(); break;
             case"goBack":goBack(); break;
-            case"tavernAgain":tavernAgain(); break;
             case"blue":blue(); break;
             case"northAgain": northAgain(); break;
             case"killKing": killKing(); break;
@@ -136,8 +138,8 @@ public class Story {
 
         game.nextPos1 = "north";
         game.nextPos2 = "east";
-        game.nextPos3 = "tavernAgain";
-        game.nextPos4 = "west";
+        game.nextPos3 = "south";
+        game.nextPos4 = "tavernAgain";
 
 
 
@@ -320,7 +322,7 @@ public class Story {
         game.nextPos4 = "";
     }
 
-    public void west(){
+    public void south(){
         westC++;
         ui.mainTextA.setText("test");
     }

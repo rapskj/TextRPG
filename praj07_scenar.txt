@@ -60,6 +60,69 @@ Ovšem pokud vybere modrou pilulku, která je otrávená, spustí se tento dialo
 
 A hra skončila.
 
+-----------
+North Again
+------------
+Pokud by hráč znovu klikl na tlačítko [North] tak se spustí tento dialog:
+"[Fairy Queen]: There is nothing left to say, adventurer. Go back."
+a hráč je nucen se vrátit zpátky
+
+-------
+East
+-------
+"After many hours of climbing up the mountain, you reached a Dwarven city of Khaadgard. You quickly sought an audience from King Elrokk.
+[Elrokk]: Well, well, well. The famous adventurer, trying to steal all the joy from this world. I will not go down without a fight!"
+
+Hráč má na výběr buď mluvit s králem anebo bojovat.
+
+Pokud hráč promluví s králem, tak se nic nestane, neboť trpasličí král je neuvěřitelně tvrdohlavý a musí ho zabít.
+Až hráč zabije krále, tak sebere trpasličí radost a vrací se zpátky.
+
+Pokud hráč zvolí bojovat, tak ho opět musí zabít, vezme radost a prchá pryč.
+
+----------
+East again
+-----------
+Hráč spáchal genocidu, už se tam nedá nic dělat.
+
+-------
+South
+-------
+"You finally reached the Temple of Chaos. You see two gates in front of you and multiple items laying around.
+You see a torch, strange box and rusty key."
+
+Hráč má na výběr tyto tři předměty, přičemž pochodeň rozsvítí místnost a odhalí tajnou místnost.
+Divná krabice obsahuje useklou hlavu trpaslíka a rezavý klíč odemyká obě brány.
+
+První brána vede do skladu, kde hráč může vzít dobrovolnou radost (která se nezapočítává do úkolu) a zhnilé rajče.
+Druhá brána vede k pánu Chaosu, který dá radost hráči pokud odpoví správně na jeho hádanku.
+
+"[Lord of Chaos]: If you want to get my joy, you need to riddle me this. What is the music of life?"
+
+Odpovědi jsou: "Silence" "Cry" "Scream" "Death"
+
+Pokud hráč odpoví jinak než "Silence" tak je teleportován zpátky na Crossroad
+
+Pokud hráč odpoví "Silence" tak mu pán Chaosu dá radost a vrací se zpátky na Crossroad
+
+
+-----------
+South again
+-----------
+
+Hráč již dostal radost a nemá důvod se vracet zpátky.
+--------
+West
+--------
+
+Hráč se vrátí do hospody a promluví si s cizincem. Ten ho pošle do hanlivých míst, neboť nesplnil úkol.
+
+Pokud hráč má všechny radosti v inventáři, cizinec mu pogratuluje a hra končí.
+
+
+
+
+
 -----------------
 Crossroads Again
 -----------------
@@ -68,6 +131,7 @@ Crossroads Again
 
 Hráč zde může zjistit, kolik předmětů již má skrze tlačítko "Status"
 
-Pokud by hráč znovu klikl na tlačítko [North] tak se spustí tento dialog:
-"[Fairy Queen]: There is nothing left to say, adventurer. Go back."
-a hráč je nucen se vrátit zpátky
+Pokud má hráč všechny radosti, může se vrátit zpátky pomocí tlačítka "South"
+
+
+
